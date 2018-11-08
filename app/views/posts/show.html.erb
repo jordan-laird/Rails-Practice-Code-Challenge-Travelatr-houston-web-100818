@@ -1,0 +1,5 @@
+<h1><%= @post.title %> </h1>
+<h3><%= link_to @post.destination.name, @post.destination %>, <%= @post.destination.country %></h3>
+<h3><%= link_to @post.blogger.name, @post.blogger %></h3>
+<h5><%= link_to pluralize(@post.likes, 'like'), "#{@post.id}/like" %> </h5>
+<p><%= @post.content %> </p>

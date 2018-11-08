@@ -1,0 +1,12 @@
+<%= form_for @post do |f| %>
+<%= f.label "Title"%><br>
+<%= f.text_field :title %><br>
+<%= f.label "Blogger"%><br>
+<%= f.collection_select(:blogger_id, Blogger.all, :id, :name) %><br>
+<%= f.label "Destination"%><br>
+<%= f.collection_select(:destination_id, Destination.all, :id, :name) %><br>
+<%= f.label "Content"%><br>
+<%= f.text_area :content %><br>
+<%= f.submit%>
+
+<% end%>

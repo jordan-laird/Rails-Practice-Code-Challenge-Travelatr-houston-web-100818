@@ -1,0 +1,13 @@
+<h1><%= @blogger.name %> </h1>
+<h3>Age: <%= @blogger.age %> </h3> 
+<p>Bio: <%= @blogger.bio %> </p>
+<% if @blogger.posts.size != 0%>
+<p>Total likes: <%= @blogger.total_likes %> </p>
+<h3>Featured post: <%= link_to @blogger.featured_post.title, @blogger.featured_post %> </h3>
+<h4>Frequent destinations:</h4>
+<ol>
+    <% @blogger.most_blogged_dests.each do |dest| %>
+        <li><%= link_to dest.name, dest %> </li>
+    <% end %>
+</ol>
+<% end%>
